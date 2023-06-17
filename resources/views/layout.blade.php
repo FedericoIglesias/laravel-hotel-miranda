@@ -1,4 +1,6 @@
-<!-- Ñ require_once ('variables.php') -->
+<?php 
+use Resources\Utils\variables;
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +36,7 @@
                 <a href="/about-us">About Us</a>
                 <a href="/rooms">Rooms</a>
                 <a href="/offers">Offers</a>
-                <a href="/new-details">Contact</a>
+                <a href="/contact">Contact</a>
             </div>
             <div class="div__img">
                 <div class="img__iconPerson"><img src="assets/login.svg" alt="iconPerson"></div>
@@ -65,7 +67,7 @@
                 <a href="about-us">About Us</a>
                 <a href="rooms">Rooms</a>
                 <a href="offers">Offers</a>
-                <a href="new-details">Contact</a>
+                <a href="contact">Contact</a>
             </div>
 
             <div class="div__img">
@@ -168,18 +170,7 @@
 
             <article class="art__service">
                 <h2>Services</h2>
-                <div class="service__list">
-                    <div class="list">
-                    @foreach ($services1 as $service) 
-                    <p><span>+</span> <?= $service ?></p>
-                    @endforeach
-                    </div> 
-                    <div class="list">
-                    @foreach ($services2 as $service) 
-                    <p><span>+</span> <?= $service ?></p>
-                    @endforeach
-                    </div>
-                </div>
+
             </article>
 
             <article class="art__contact">

@@ -1,0 +1,125 @@
+@import "./_mixin.scss";
+
+.room {
+    // PROOF --------------------------------------
+    .proof__art {
+        @include blackLight;
+        .art__div {
+            padding: 75px 20px 96px;
+            margin: auto;
+            max-width: 1170px;
+            position: relative;
+            .art__p1 {
+                @include text(14px, white, 700);
+                margin-bottom: 16px;
+            }
+            .art__p2 {
+                @include text(56px, white);
+                @include old;
+            }
+            .div__div {
+                position: absolute;
+                bottom: 0px;
+                right: 20px;
+                background-color: white;
+                padding: 16px 24px;
+                @include text(16px, #222222, 700);
+                span {
+                    color: #bead8e;
+                }
+            }
+        }
+    }
+    //  SHOW ROOMS --------------------------------------
+    .show__art {
+        padding: 50px 20px;
+        .art__div {
+            .div__div {
+                background-color: #777;
+                max-width: 370px;
+                margin: auto;
+                .div__img {
+                    width: 100%;
+                    max-width: 370px;
+                    height: 300px;
+                }
+            }
+            .div__div2 {
+                background-color: white;
+                padding: 12px 24px;
+                position: relative;
+                width: 256px;
+                top: -20px;
+                margin: auto;
+                margin-bottom: 28px;
+            }
+            .div__p {
+                @include text(24px, #222222);
+                margin-bottom: 16px;
+                text-align: center;
+                @include old;
+            }
+            .div__p1 {
+                @include text(14px, #777);
+                margin: auto;
+                margin-bottom: 10px;
+                text-align: center;
+                max-width: 290px;
+                @include roboto;
+            }
+            .div__p2 {
+                @include text(16px, #bead8e, 700);
+                margin-bottom: 52px;
+                text-align: center;
+                span {
+                    @include text(16px, #bdbdbd, 700);
+                }
+            }
+        }
+        .n7 {
+            display: none;
+        }
+        .n8 {
+            display: none;
+        }
+        .n9 {
+            display: none;
+        }
+        .n10 {
+            display: none;
+        }
+        .n11 {
+            display: none;
+        }
+        .n12 {
+            display: none;
+        }
+    }
+    @media (min-width: 1000px) {
+        .show__art {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            justify-content: space-between;
+            margin: auto;
+            .n7 {
+                display: block;
+            }
+            .n8 {
+                display: block;
+            }
+            .n9 {
+                display: block;
+            }
+            .n10 {
+                display: block;
+            }
+            .n11 {
+                display: block;
+            }
+            .n12 {
+                display: block;
+            }
+        }
+    }
+}

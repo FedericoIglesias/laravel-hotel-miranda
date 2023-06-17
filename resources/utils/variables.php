@@ -1,22 +1,26 @@
 <?php
 
-$services1 = [
-    "Resturent & Bar",
-    " Swimming Pool",
-    "Wellness & Spa Resturant",
-    " Conference Rooms",
-    "Coctail Party House"
-];
+namespace resources\utils;
+class Variables{
 
-$services2 = [
-    "Gaming Zone",
-    "Marrige Party",
-    "Party Planning",
-    "Tour Consultancy"
-];
-
-
-$roomsasdad = [
+    
+    static $services1 = [
+        "Resturent & Bar",
+        " Swimming Pool",
+        "Wellness & Spa Resturant",
+        " Conference Rooms",
+        "Coctail Party House"
+    ];
+    
+    static $services2 = [
+        "Gaming Zone",
+        "Marrige Party",
+        "Party Planning",
+        "Tour Consultancy"
+    ];
+    
+    
+    static $roomsasdad = [
     [
         'photo' => "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1505691938895-1758d7feb511",
         'amenities' => 'oli',
@@ -64,7 +68,7 @@ $roomsasdad = [
     ],
 ];
 
-$facilities = [
+static $facilities = [
     [
         'img' => './assets/index/facilities/facilities1.svg',
         'name' => 'Have High Rating',
@@ -96,3 +100,4 @@ $facilities = [
         'id' => '6'
     ],
 ];
+};

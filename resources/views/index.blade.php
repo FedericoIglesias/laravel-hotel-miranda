@@ -129,19 +129,19 @@
         <div class="swiper swiperFacilities">
 
             <div class="swiper-wrapper">
-                <?php foreach ($amenities as $amenitie) : ?>
+                @foreach ($amenities as $amenitie)
                     <div class="swiper-slide">
                         <div class="art__div ">
-                            <p class="div__p1"><?= $amenitie['id'] ?></p>
+                            <p class="div__p1"> $amenitie['id']</p>
                             <img src="./assets/index/facilities/facilities1.svg" alt="">
-                            <p class="div__p2"><?= $amenitie['name'] ?></p>
+                            <p class="div__p2"> $amenitie['name']</p>
                             <p class="div__p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor
                                 incididunt ut labore
                                 et dolore magna..</p>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                @endforeach
             </div>
 
 
