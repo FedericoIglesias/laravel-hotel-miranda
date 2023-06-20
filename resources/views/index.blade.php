@@ -129,7 +129,7 @@
         <div class="swiper swiperFacilities">
 
             <div class="swiper-wrapper">
-                @foreach ($amenities as $amenitie)
+                @foreach (Helpers::$facilities as $amenitie)
                     <div class="swiper-slide">
                         <div class="art__div ">
                             <p class="div__p1"> $amenitie['id']</p>

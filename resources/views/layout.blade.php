@@ -1,6 +1,4 @@
-<?php 
-use Resources\Utils\variables;
-?> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,7 +168,18 @@ use Resources\Utils\variables;
 
             <article class="art__service">
                 <h2>Services</h2>
-
+                <div class="service__list">
+                    <div class="list">
+                    @foreach (Helpers::$services1 as $service) 
+                    <p><span>+</span> <?= $service ?></p>
+                    @endforeach
+                    </div> 
+                    <div class="list">
+                    @foreach (Helpers::$services2 as $service) 
+                    <p><span>+</span> <?= $service ?></p>
+                    @endforeach
+                    </div>
+                </div>
             </article>
 
             <article class="art__contact">

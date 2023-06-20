@@ -1,7 +1,12 @@
 <?php
 
-return [
+use Illuminate\Support\Facades\Facade;
 
+return [
+    // 'aliases' => Facade::defaultAliases()->merge([
+    //     // 'Example' => App\Facades\Example::class,
+    //     'Helpers' => App\Helpers\Helpers::class,
+    // ])->toArray(),
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults

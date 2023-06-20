@@ -5,10 +5,6 @@ use Illuminate\Support\ServiceProvider;
 
 return [
     
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
-        'Variables' => \Resources\Utils\Variables::class,
-    ])->toArray(),
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -187,6 +183,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Helpers' => App\Helpers\Helpers::class,
     ])->toArray(),
 
 ];

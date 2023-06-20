@@ -46,10 +46,11 @@
     </article>
     <!-- FORMS -->
     <form class="form__art" method="post">
+        @csrf
         <div class="art__div">
             <div class="div__input ">
                 <img src="../assets/new-details/man.svg" alt="">
-                <input type="text" placeholder="Your full name" name='name'required>
+                <input type="text" placeholder="Your full name" name='name' required>
             </div>
             <div class="div__input ">
                 <img src="../assets/new-details/mail.svg" alt="">
@@ -66,7 +67,7 @@
         </div>
         <div class="div__textarea">
             <img src="../assets/new-details/pencil.svg" alt="">
-            <textarea name="" id="" cols="" rows="30" placeholder="Enter message" name="description" required></textarea>
+            <textarea name="" id="" cols="" rows="30" placeholder="Enter message" name="asd" required></textarea>
         </div>
         <input type="submit" value="send" class="btn" name="sendForm">
     </form>

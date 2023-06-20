@@ -3,6 +3,7 @@
 use App\Http\Controllers\aboutController;
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\offersControler;
 use App\Http\Controllers\roomsController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,8 @@ Route::get('/about-us', [aboutController::class, 'index']);
 
 Route::get('/contact',[contactController::class, 'index']);
 
+Route::post('/contact',[contactController::class, 'postForm']);
+
 Route::get('/rooms', [roomsController::class, 'index']);
+
+Route::get('/offers', [offersControler::class, 'index']);
