@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\aboutController;
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\offersControler;
 use App\Http\Controllers\roomsController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', [indexController::class, 'index']
-);
+Route::get('/', [indexController::class, 'index']);
 
 Route::get('/about-us', [aboutController::class, 'index']);
 
@@ -34,3 +29,15 @@ Route::post('/contact',[contactController::class, 'postForm']);
 Route::get('/rooms', [roomsController::class, 'index']);
 
 Route::get('/offers', [offersControler::class, 'index']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
