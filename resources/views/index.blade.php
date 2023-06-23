@@ -14,23 +14,26 @@
                 <button class="div__button2">LEARN MORE</button>
             </div>
         </div>
-        <div class="art__div2">
-            <div class="div2__div">
-                <div>
-                    <p>Arrival Date</p>
-                    <input type="date">
-                    <div class="div2__line"></div>
-                </div>
-                <div>
-                    <p>LeDeparture Date</p>
-                    <input type="date">
-                    <div class="div2__line"></div>
-                </div>
-                <div>
-                    <button class="div2__button">CHECK AVAILABILITY</button>
+        <form method="get" action="rooms-list">
+            @csrf
+            <div class="art__div2">
+                <div class="div2__div">
+                    <div>
+                        <p>Arrival Date</p>
+                        <input type="date" name='checkin'>
+                        <div class="div2__line"></div>
+                    </div>
+                    <div>
+                        <p>LeDeparture Date</p>
+                        <input type="date" name='checkout'>
+                        <div class="div2__line"></div>
+                    </div>
+                    <div>
+                        <button class="div2__button" type="submit">CHECK AVAILABILITY</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </article>
 
 
@@ -130,17 +133,17 @@
 
             <div class="swiper-wrapper">
                 @foreach (Helpers::$facilities as $amenitie)
-                    <div class="swiper-slide">
-                        <div class="art__div ">
-                            <p class="div__p1"> $amenitie['id']</p>
-                            <img src="./assets/index/facilities/facilities1.svg" alt="">
-                            <p class="div__p2"> $amenitie['name']</p>
-                            <p class="div__p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor
-                                incididunt ut labore
-                                et dolore magna..</p>
-                        </div>
+                <div class="swiper-slide">
+                    <div class="art__div ">
+                        <p class="div__p1"> $amenitie['id']</p>
+                        <img src="./assets/index/facilities/facilities1.svg" alt="">
+                        <p class="div__p2"> $amenitie['name']</p>
+                        <p class="div__p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore
+                            et dolore magna..</p>
                     </div>
+                </div>
                 @endforeach
             </div>
 

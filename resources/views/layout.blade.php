@@ -36,12 +36,12 @@
                 <a href="/contact">Contact</a>
             </div>
             <div class="div__img">
-                <div class="img__iconPerson"><img src="assets/login.svg" alt="iconPerson"></div>
+                <div class="img__iconPerson"><img src="assets/log" alt="iconPerson"></div>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button class="img__search" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                                <img src="assets/login.svg" alt="search">
+                                                <img src="public/assets/login.svg" alt="search">
                                             </button>
                 </form>
             </div>

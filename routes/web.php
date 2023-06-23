@@ -6,6 +6,7 @@ use App\Http\Controllers\aboutController;
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\offersControler;
+use App\Http\Controllers\Room_ListController;
 use App\Http\Controllers\roomsController;
 
 /*
@@ -28,11 +29,13 @@ Route::post('/contact',[contactController::class, 'postForm'])->middleware(['aut
 
 Route::get('/rooms', [roomsController::class, 'index'])->middleware(['auth', 'verified']);
 
+Route::get('/rooms-list', [Room_ListController::class, 'index'])->middleware(['auth', 'verified']);
+
 Route::get('/offers', [offersControler::class, 'index'])->middleware(['auth', 'verified']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
