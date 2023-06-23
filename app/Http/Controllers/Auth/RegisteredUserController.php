@@ -4,10 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-<<<<<<< HEAD
-=======
 use App\Models\User_guest;
->>>>>>> test
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -27,10 +24,6 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     }
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> test
     /**
      * Handle an incoming registration request.
      *
@@ -40,19 +33,11 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-<<<<<<< HEAD
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
-        $user = User::create([
-=======
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User_guest::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User_guest::create([
->>>>>>> test
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

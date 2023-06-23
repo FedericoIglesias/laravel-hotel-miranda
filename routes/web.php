@@ -1,10 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
-=======
->>>>>>> test
 use App\Http\Controllers\aboutController;
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\indexController;
@@ -23,15 +20,15 @@ use App\Http\Controllers\roomsController;
 */
 Route::get('/', [indexController::class, 'index']);
 
-Route::get('/about-us', [aboutController::class, 'index']);
+Route::get('/about-us', [aboutController::class, 'index'])->middleware(['auth', 'verified']);
 
-Route::get('/contact',[contactController::class, 'index']);
+Route::get('/contact',[contactController::class, 'index'])->middleware(['auth', 'verified']);
 
-Route::post('/contact',[contactController::class, 'postForm']);
+Route::post('/contact',[contactController::class, 'postForm'])->middleware(['auth', 'verified']);
 
-Route::get('/rooms', [roomsController::class, 'index']);
+Route::get('/rooms', [roomsController::class, 'index'])->middleware(['auth', 'verified']);
 
-Route::get('/offers', [offersControler::class, 'index']);
+Route::get('/offers', [offersControler::class, 'index'])->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

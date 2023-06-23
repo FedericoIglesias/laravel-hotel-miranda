@@ -1,8 +1,15 @@
 <?php
 
 namespace App\Helpers;
+
+use Illuminate\Support\Facades\Auth;
+
 class Helpers
 {
+
+    public function logout  () {
+        Auth::logout();
+    }
 
     static $services1 = [
         "Resturent & Bar",
